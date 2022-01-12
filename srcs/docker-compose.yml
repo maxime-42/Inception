@@ -9,12 +9,12 @@ services:
     image: my_nginx
     ports:
       - "8080:80"
+      - "443:443"
     volumes:
       - /tmp/docker_volume:/var/www/wordpress
     restart: always
-# ###################### wordpress #########################
-######################################
 
+####################### wordpress #########################
   wordpress:
     build:
       context: ./wordpress
