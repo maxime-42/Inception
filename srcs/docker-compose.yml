@@ -1,0 +1,27 @@
+version: "3"
+services:
+  nginx:
+    depends_on:
+      - wordpress
+    build:
+      context: ./nginx
+    container_name: "inception_nginx"
+    image: my_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - /tmp/docker_volume:/var/www/wordpress
+    restart: always
+# ###################### wordpress #########################
+######################################
+
+  wordpress:
+    build:
+      context: ./wordpress
+    image: ft_wordpress
+    ports:
+      - "9000:9000"
+    container_name: "inception_wordpress"
+    volumes:
+      - /tmp/docker_volume:/var/www/wordpress
+    restart: always
