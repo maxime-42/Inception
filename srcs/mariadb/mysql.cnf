@@ -1,0 +1,8 @@
+[mysqld]
+user = root
+port = 3306
+datadir = /var/run/mysqld
+bind-address = 0.0.0.0
+skip-networking = false
+pid-file = /var/run/mysqld/mysqld.pid
+socket = /run/mysqld/mysqld.sock
