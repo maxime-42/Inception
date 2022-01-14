@@ -6,7 +6,7 @@ services:
     build:
       context: ./nginx
     container_name: "inception_nginx"
-    image: my_nginx
+    image: ft_nginx
     ports:
       - "8080:80"
       - "443:443"
@@ -16,12 +16,60 @@ services:
 
 ####################### wordpress #########################
   wordpress:
+    depends_on:
+      - mariadb
     build:
       context: ./wordpress
     image: ft_wordpress
     ports:
       - "9000:9000"
     container_name: "inception_wordpress"
+    environment:
+      # - WP_DATABASE=${WP_DATABASE}
+      # - WP_TITLE=${WP_TITLE}
+      # - WP_ADMIN_USER=${WP_ADMIN_USER}
+      # - WP_ADMIN_PWD=${WP_ADMIN_PWD}
+      # - WP_ADMIN_EMAIL=${WP_ADMIN_EMAIL}
+      # - MARIADB_USER=${MARIADB_USER}
+      # - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+      # - MARIADB_DATABASE=${MARIADB_DATABASE}
+      # - MARIADB_PORT=${MARIADB_PORT}
+      # - PHP_FPM_PORT=${PHP_FPM_PORT}
+      # - MARIADB_HOST=${MARIADB_HOST}
+        - WP_DATABASE="wordpress"
+        - WP_TITLE="Inception's wordpress website"
+        - WP_ADMIN_USER="admin"
+        - WP_ADMIN_PWD="admin"
+        - MARIADB_USER=wordpress
+        - MARIADB_PASSWORD=wordpress
+        - MARIADB_DATABASE=wordpress
+        - MARIADB_PORT=3306
+        - MARIADB_HOST=mariadb
+
+
     volumes:
       - /tmp/docker_volume:/var/www/wordpress
+    restart: always
+
+####################### mysql #########################
+
+  mariadb:
+    build:
+      context: ./mariadb
+    container_name: "inception_mariadb"
+    image: ft_mariadb
+    environment:
+    #   - MARIADB_USER=${MARIADB_USER}
+    #   - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+    #   - MARIADB_DATABASE=${MARIADB_DATABASE}
+    #   - MARIADB_PORT=${MARIADB_PORT}
+        - MARIADB_USER=wordpress
+        - MARIADB_PASSWORD=wordpress
+        - MARIADB_DATABASE=wordpress
+        - MARIADB_PORT=3306
+        - MARIADB_HOST=mariadb
+        - BITNAMI_DEBUG=true
+
+    volumes:
+      - /tmp/mariadb:/var/lib/mysql
     restart: always
