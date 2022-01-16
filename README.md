@@ -1,6 +1,7 @@
 # Inception
-<h1>This project aims to broaden your knowledge of system administration by using Docker.<h1>
-<h1>I virtualize several Docker images, creating them in your new personal virtual machine.</h1>
+<h2>This project aims to broaden your knowledge of system administration by using Docker.<h2>
+<h2>I virtualize several Docker images, creating them in your new personal virtual machine.</h2>
+
 <ul>
 	<h1>Docker for Beginners: these cours give definitions of container :</h1>
 	<li>https://www.youtube.com/watch?v=zJ6WbK9zFpI</li>
@@ -64,7 +65,7 @@
 </ul>
 
 <ul>
-	<h1>CMD vs ENTRYPOINT<h1>
+	<h1>CMD vs ENTRYPOINT</h1>
 	<li>https://www.youtube.com/watch?v=gq78RJIC6ow</li>
 	<li>https://www.youtube.com/watch?v=C1GE07UEFDo&t=202s</li>
 	<li>https://www.youtube.com/watch?v=OYbEWUbmk90</li>
@@ -73,11 +74,10 @@
 
 <ul>
 	<h1>others impotante sources</h1>
-	<li>mysqld_safe 			: <a>https://mariadb.com/kb/en/mysqld_safe/</a> </li>
-	<li>exec builtin command	: <a>https://www.computerhope.com/unix/bash/exec.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,by%20the%20command%20you%20specify</a>.</li>
-	<li>id address				: <a> https://opensource.com/article/18/5/how-find-ip-address-linux</a></li>
+	<li>mysqld_safe 			:	https://mariadb.com/kb/en/mysqld_safe/</li>
+	<li>exec builtin command	: 	https://www.computerhope.com/unix/bash/exec.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,by%20the%20command%20you%20specify</li>
+	<li>id address				: https://opensource.com/article/18/5/how-find-ip-address-linux</li>
 	<li>le chiffrement SSL / TLS : https://www.youtube.com/watch?v=7W7WPMX7arI</li>
 	<li>https://www.cloudbees.com/blog/ensuring-containers-are-always-running-with-dockers-restart-policy</li>
 
-	
 </ul>
