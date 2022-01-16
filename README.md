@@ -40,9 +40,6 @@
 	<li> https://stackoverflow.com/questions/25970711/what-is-the-difference-between-nginx-daemon-on-off-option </li>
 </ul>
 
-<h1>Restart Policy</h1>
-
-
 <ul>
 	<h1>Unable to kill process with PID 1 in docker container</h1>
 	<li>https://unix.stackexchange.com/questions/457649/unable-to-kill-process-with-pid-1-in-docker-container</li>
@@ -78,6 +75,6 @@
 	<li>exec builtin command	: 	https://www.computerhope.com/unix/bash/exec.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,by%20the%20command%20you%20specify</li>
 	<li>id address				: https://opensource.com/article/18/5/how-find-ip-address-linux</li>
 	<li>le chiffrement SSL / TLS : https://www.youtube.com/watch?v=7W7WPMX7arI</li>
-	<li>https://www.cloudbees.com/blog/ensuring-containers-are-always-running-with-dockers-restart-policy</li>
+	<li>Restart Policy : https://www.cloudbees.com/blog/ensuring-containers-are-always-running-with-dockers-restart-policy</li>
 
 </ul>
