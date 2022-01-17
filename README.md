@@ -72,9 +72,22 @@
 <ul>
 	<h1>others impotante sources</h1>
 	<li>mysqld_safe 			:	https://mariadb.com/kb/en/mysqld_safe/</li>
-	<li>exec builtin command	: 	https://www.computerhope.com/unix/bash/exec.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,by%20the%20command%20you%20specify</li>
+	<li>
+		exec builtin command	: 	https://www.computerhope.com/unix/bash/exec.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,by%20the%20command%20you%20specify
+	</li>
 	<li>id address				: https://opensource.com/article/18/5/how-find-ip-address-linux</li>
 	<li>le chiffrement SSL / TLS : https://www.youtube.com/watch?v=7W7WPMX7arI</li>
 	<li>Restart Policy : https://www.cloudbees.com/blog/ensuring-containers-are-always-running-with-dockers-restart-policy</li>
+	<li>
+		How to import and export a MySQL database : https://www.a2hosting.com/kb/developer-corner/mysql/import-and-export-a-mysql-database 
+	</li>
+	<li>
+		Docker: Copying files from Docker container to host :https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
+	</li>
+	<li>
+		mysql_install_db initializes the MariaDB data directory and creates the system tables in the mysql database
+		https://mariadb.com/kb/en/mysql_install_db/
+	</li>
 
 </ul>
+#mysqldump --routines -u wordpress -p wordpress > wp_backup_db.sql
