@@ -41,6 +41,6 @@ services:
       - "./.env" #inclusion du  fichier .env :)
     volumes:
       - /tmp/mariadb:/var/lib/mysql
-    # restart: always
+    restart: always
     # restart: on-failure
 

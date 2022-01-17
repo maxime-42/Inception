@@ -21,11 +21,11 @@ mysql -e "FLUSH PRIVILEGES;"
 
 #GRANT ALL ON wordpress.* TO 'admin'@'localhost' IDENTIFIED BY 'admin' WITH GRANT OPTION;
 
-echo "[i] database shutdown"
+echo "[i] database shutdown\n"
 sleep 2
 mysqladmin shutdown
 
-echo "[i] database restarting"
+echo "[i] database restarting\n"
 sleep 2
 
 exec mysqld -u root
