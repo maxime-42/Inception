@@ -11,7 +11,7 @@ services:
       - "8080:80"
       - "443:443"
     volumes:
-      - /tmp/docker_volume:/var/www/wordpress
+      - /home/mkayumba/data/wp_nginx:/var/www/wordpress
     restart: always
 
 ####################### wordpress #########################
@@ -27,7 +27,7 @@ services:
     env_file:
       - "./.env"
     volumes:
-      - /tmp/docker_volume:/var/www/wordpress
+      - /home/mkayumba/data/wp_nginx:/var/www/wordpress
     restart: always
 
 ####################### mariadb #########################
@@ -40,7 +40,7 @@ services:
     env_file:
       - "./.env" #inclusion du  fichier .env :)
     volumes:
-      - /tmp/mariadb:/var/lib/mysql
+      - /home/mkayumba/data/database:/var/lib/mysql
     restart: always
     # restart: on-failure
 

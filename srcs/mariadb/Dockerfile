@@ -9,8 +9,8 @@ RUN apt-get update \
 
 VOLUME /var/lib/mysql
 
-COPY ./create_database.sql ./
 COPY ./start.sh ./
+COPY ./wp_backup_db.sql ./
 COPY ./mysql.cnf  /etc/mysql/my.cnf
 EXPOSE 3306
 
