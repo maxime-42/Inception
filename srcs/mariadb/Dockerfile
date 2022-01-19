@@ -5,13 +5,13 @@ RUN apt-get update \
         && rm -rf /var/lib/mysql \
         && mkdir -p /var/lib/mysql /run/mysqld \
         && chown -R mysql:mysql /var/lib/mysql  /run/mysqld \
-        && chmod 777 /var/run/mysqld
+        && chmod 777 /var/run/mysqld\
+		&&  apt-get -y install emacs
 
 VOLUME /var/lib/mysql
 
 COPY ./start.sh ./
-COPY ./wp_backup_db.sql ./
-COPY ./mysql.cnf  /etc/mysql/my.cnf
+COPY ./dump.sql ./
 EXPOSE 3306
 
 ENTRYPOINT ["./start.sh"]

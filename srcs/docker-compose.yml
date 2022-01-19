@@ -42,5 +42,4 @@ services:
     volumes:
       - /home/mkayumba/data/database:/var/lib/mysql
     restart: always
-    # restart: on-failure
 

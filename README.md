@@ -68,7 +68,13 @@
 	<li>https://www.youtube.com/watch?v=OYbEWUbmk90</li>
 	<li>https://www.youtube.com/watch?v=U1P7bqVM7xM</li>
 </ul>
-
+<ul>
+	<h1>What is Cat EOF in Bash Script?</h1>
+	<li>https://linuxhint.com/what-is-cat-eof-bash-script/</li>
+	<li>https://unix.stackexchange.com/questions/583782/what-is-different-between-eof-and-eof-in-bash-script</li>
+	<li>https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash</li>
+</h1>
+</ul>
 <ul>
 	<h1>others impotante sources</h1>
 	<li>mysqld_safe 			:	https://mariadb.com/kb/en/mysqld_safe/</li>
@@ -88,6 +94,12 @@
 		mysql_install_db initializes the MariaDB data directory and creates the system tables in the mysql database
 		https://mariadb.com/kb/en/mysql_install_db/
 	</li>
-
+	<li>
+		Dumping Data in SQL Format with mysqldump
+		https://dev.mysql.com/doc/mysql-backup-excerpt/5.7/en/mysqldump-sql-format.html
+	</li>
+	<li>
+		Docker: Copying files from Docker container to host
+		https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
+	</li>
 </ul>
-#mysqldump --routines -u wordpress -p wordpress > wp_backup_db.sql
