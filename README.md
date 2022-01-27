@@ -1,6 +1,5 @@
 # Inception
-<h2>This project aims to broaden your knowledge of system administration by using Docker.<h2>
-<h2>I virtualize several Docker images, creating them in your new personal virtual machine.</h2>
+<h1>This project aims to broaden your knowledge of system administration by using Docker</h1>
 
 <ul>
 	<h1>Docker for Beginners: these cours give definitions of container :</h1>

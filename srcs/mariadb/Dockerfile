@@ -10,10 +10,8 @@ RUN apt-get update \
 
 VOLUME /var/lib/mysql
 
-COPY ./start.sh ./
+COPY ./entrypoint.sh ./
 COPY ./dump.sql ./
 EXPOSE 3306
 
-ENTRYPOINT ["./start.sh"]
-
-# CMD ["mysqld"]
+ENTRYPOINT ["./entrypoint.sh"]
