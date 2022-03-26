@@ -1,18 +1,17 @@
-NAME		=	inception
+NAME = ft_transcendance
 
-all		: 	$(NAME)
+all: prune reload
 
-$(NAME)		:
-				docker-compose -f srcs/docker-compose.yaml up --force-recreate --build
+stop:
+	@ docker-compose -f srcs/docker-compose.yml down
 
-install		:
-				docker-compose -f srcs/docker-compose.yaml up --force-recreate --build
+clean:
+	@ docker-compose -f srcs/docker-compose.yml down --volumes --rmi all
 
-clean		:	
-				docker-compose -f srcs/docker-compose.yaml down 
+prune: clean
+	@ docker system prune -f
 
-fclean		:	clean
-				rm -rf /home/mkayumba
-				sudo docker rm -f $(docker ps -aq); sudo docker rmi -f $(docker images -q); docker builder prune; 
+reload: 
+	@ docker-compose -f srcs/docker-compose.yml up --build
 
-.PHONY		:	all clean_host clean fclean
+.PHONY: linux stop clean prune reload all
