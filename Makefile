@@ -1,4 +1,4 @@
-NAME = ft_transcendance
+NAME = Inception
 
 all: prune reload
 
