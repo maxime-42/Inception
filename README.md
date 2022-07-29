@@ -6,6 +6,8 @@
 	<li>https://www.youtube.com/watch?v=zJ6WbK9zFpI</li>
 	<li>https://www.youtube.com/watch?v=3c-iBn73dDE</li>
 	<li>https://www.youtube.com/watch?v=EnJ7qX9fkcU</li>
+	<li>https://www.youtube.com/watch?v=8fi7uSYlOdc&t=969s</li>
+	<li> https://www.youtube.com/watch?v=Utf-A4rODH8&t=9s</li>
 </ul>
 
 <ul>
