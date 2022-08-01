@@ -1,0 +1,45 @@
+version: "3"
+services:
+  nginx:
+    depends_on:
+      - wordpress
+    build:
+      context: ./nginx
+    container_name: "inception_nginx"
+    image: ft_nginx
+    ports:
+      - "8080:80"
+      - "443:443"
+    volumes:
+      - /home/mkayumba/data/wp_nginx:/var/www/wordpress
+    restart: always
+
+####################### wordpress #########################
+  wordpress:
+    depends_on:
+      - mariadb
+    build:
+      context: ./wordpress
+    image: ft_wordpress
+    ports:
+      - "9000:9000"
+    container_name: "inception_wordpress"
+    env_file:
+      - "./.env"
+    volumes:
+      - /home/mkayumba/data/wp_nginx:/var/www/wordpress
+    restart: always
+
+####################### mariadb #########################
+
+  mariadb:
+    build:
+      context: ./mariadb
+    container_name: "inception_mariadb"
+    image: ft_mariadb
+    env_file:
+      - "./.env" #inclusion du  fichier .env :)
+    volumes:
+      - /home/mkayumba/data/database:/var/lib/mysql
+    restart: always
+
